@@ -10,7 +10,7 @@ async function latLonAPI(){
     // console.log("search pressed")
     searchCity=document.getElementById("weatherSearch").value.toLowerCase()
     api_key="b0c52cc76ab9de88a3a020abae2f22c7"
-    url=`http://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&limit=1&appid=${api_key}`
+    url=`https://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&limit=1&appid=${api_key}`
     // config={
     //     method:'GET',
     //     headers:{
@@ -84,7 +84,7 @@ async function weatherAPI(data){
         const temp=document.createElement('h2')
         temp.innerText=data.main.temp +"\u00B0C"
         const icon=document.createElement('img')
-        icon.src=`http://openweathermap.org/img/w/${data.weather[0].icon}.png`
+        icon.src=`https://openweathermap.org/img/w/${data.weather[0].icon}.png`
         icon.classList.add("result-icon")
         weatherDiv.appendChild(temp)
         weatherDiv.appendChild(icon)
