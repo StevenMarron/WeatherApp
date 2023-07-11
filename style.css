@@ -1,0 +1,114 @@
+body{
+  /* background: rgb(56,120,255); */
+  background: linear-gradient(60deg, 
+    rgba(56,120,255,1) 0%,
+    rgba(255,89,0,1) 68%,
+    rgba(223,161,0,1) 100%);
+  height:100vh;
+  position:relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#header{
+  padding:10px;
+  margin:10px;
+  color:rgba(56,120,255,1);
+}
+#header > h1{
+  font-size: 40px;
+}
+
+#searchForm{
+  margin:10px;
+  padding:10px;
+}
+.weatherInput{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background:white;
+  border-radius: 20px;
+  width:60vw;
+  max-width:600px;
+  min-height:200px;
+  text-align: center;
+  padding:10px;
+  user-select: text;
+}
+
+#weatherSearch::selection{
+  background-color:rgba(255,89,0,1)!important;
+}
+
+#weatherSearch{
+  background-color: rgba(56,120,255,1);
+  color:white;
+  border:none;
+  border-radius: 5px;
+  height:35px;
+  width: 50%;
+  box-shadow: 0px 1px #888888;
+}
+
+#weatherSearch::placeholder{
+  color:white;
+  opacity: 0.6;
+}
+
+#weatherSearch:focus{
+  outline: none !important;
+  border:none!important;
+  background-color: rgb(23, 51, 110);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#search-button{
+  height:35px;
+  border-radius: 5px;
+  outline:none!important;
+  border: 10px 5px 20px 50px solid rgba(0, 0, 0, 0.158);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+#search-button:hover{
+  background-color:rgba(255,89,0,1);
+  color:white;
+}
+
+input{
+  padding-left:20px;
+  color:white !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(23, 51, 110) inset !important;
+  -webkit-text-fill-color: white;
+}
+
+.searchError{
+  color:red;
+}
+
+.cloud-sun-logo{
+  width:50%;
+  height: auto;
+  margin:10px;
+}
+
+.result-icon{
+  width:30%;
+  height: auto;
+  margin:10px;
+}
